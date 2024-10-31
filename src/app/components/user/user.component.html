@@ -1,0 +1,18 @@
+<main class="flex w-full justify-center flex-col">
+    <article class="w-full flex justify-center">
+        <p-avatar 
+            [image]="user?.avatar_url" 
+            styleClass="avatar-image"
+            shape="circle"
+        />
+    </article>
+    <article class="info">
+        <i class="pi pi-linkedin text-blue-600" style="font-size: 2rem"></i>
+        <h1><a href="https://www.linkedin.com/in/{{normalizeString(user?.name)}}/">{{user?.name}}</a></h1>
+    </article>
+    <article class="info">
+        <i class="pi pi-github" style="font-size: 1.5rem"></i>
+        <span><a href="https://github.com/{{user?.login}}">{{user?.login}}</a></span>
+    </article>
+</main>
+

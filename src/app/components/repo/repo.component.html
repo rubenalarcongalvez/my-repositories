@@ -1,0 +1,33 @@
+<p-card [header]="repo?.name" styleClass="h-full">
+    <ng-template pTemplate="header">
+        <img height="220" alt="Card" [src]="repoImage + '.png'" (error)="repoImageNotFound()"/>
+    </ng-template>
+    <ng-template pTemplate="subtitle">
+        @if (pinned) {
+            <div class="flex items-baseline justify-start gap-1">
+                <i class="pi pi-star text-yellow-500"></i>
+                <b>Featured by the author</b>
+            </div>
+        }
+    </ng-template>
+    @if (repo?.description) {
+        <p>{{repo?.description}}</p>
+    }
+    <ng-template pTemplate="footer">
+        <section class="flex gap-3 mt-1">
+            <a [href]="repo?.html_url" class="w-full">
+                <p-button icon="pi pi-code" label="Code" severity="contrast" class="w-full" styleClass="w-full" />
+            </a>
+            @if (repo?.has_pages) {
+                <a href="https://rubenalarcongalvez.github.io/{{repo?.name}}/" class="w-full">
+                    <p-button icon="pi pi-external-link" label="Web" class="w-full" styleClass="w-full" />
+                </a>
+            }
+        </section>
+        <br>
+        <section class="flex gap-3 justify-between">
+            <span><b>Created at: </b>{{transformToReadableDate(repo?.created_at)}}</span>
+            <span><b>Updated at: </b>{{transformToReadableDate(repo?.updated_at)}}</span>
+        </section>
+    </ng-template>
+</p-card>

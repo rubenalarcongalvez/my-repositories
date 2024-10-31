@@ -1,0 +1,13 @@
+:host ::ng-deep {
+    .p-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .p-card-title {
+        text-wrap: wrap;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+}
