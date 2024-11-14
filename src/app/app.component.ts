@@ -28,6 +28,7 @@ export class AppComponent {
     'overcooked-level-randomizer',
     'primeng-vs-angular_material',
     'Handy_Utils_Assaultcube',
+    'clasificar-juegos'
   ];
 
   tooManyTries: boolean = false;
