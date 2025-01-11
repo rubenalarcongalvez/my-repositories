@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { GithubService } from './shared/services/github.service';
 import { GlobalModule } from './global.module';
 import { RepoComponent } from './components/repo/repo.component';
@@ -13,7 +12,7 @@ import { MessageService } from 'primeng/api';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, GlobalModule, RepoComponent, UserComponent, StyleModule, ReactiveFormsModule],
+  imports: [GlobalModule, RepoComponent, UserComponent, StyleModule, ReactiveFormsModule],
   providers: [MessageService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
