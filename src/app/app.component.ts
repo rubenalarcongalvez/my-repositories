@@ -24,6 +24,7 @@ export class AppComponent {
 
   pinnedRepositories: string[] = [
     'miscellaneous-features',
+    'listas-inteligentes',
     'overcooked-level-randomizer',
     'primeng-vs-angular_material',
     'Handy_Utils_Assaultcube',
