@@ -28,7 +28,8 @@ export class AppComponent {
     'overcooked-level-randomizer',
     'primeng-vs-angular_material',
     'Handy_Utils_Assaultcube',
-    'clasificar-juegos'
+    'clasificar-juegos',
+    'herramientas-enaire'
   ];
 
   tooManyTries: boolean = false;
@@ -82,7 +83,7 @@ export class AppComponent {
     this.githubRepos.sort((a, b) => {
       const isAPinned = this.isRepoPinned(a);
       const isBPinned = this.isRepoPinned(b);
-  
+
       if (isAPinned && !isBPinned) {
         return -1;
       }
@@ -105,7 +106,7 @@ export class AppComponent {
         }
     });
   }
-  
+
   private sortByUpdatedAt(ascending: boolean) {
     this.githubRepos.sort((a, b) => {
         const aDate = a?.updated_at ? new Date(a.updated_at) : new Date(0);
