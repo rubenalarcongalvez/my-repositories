@@ -26,10 +26,12 @@ export class AppComponent {
     'miscellaneous-features',
     'listas-inteligentes',
     'overcooked-level-randomizer',
-    'primeng-vs-angular_material',
+    'herramientas-enaire',
     'Handy_Utils_Assaultcube',
+    'react-learn',
+    'svelte-sveltekit-learn',
     'clasificar-juegos',
-    'herramientas-enaire'
+    'primeng-vs-angular_material',
   ];
 
   tooManyTries: boolean = false;

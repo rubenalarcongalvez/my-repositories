@@ -1,6 +1,6 @@
 <p-card [header]="repo?.name" styleClass="h-full">
     <ng-template pTemplate="header">
-        <img height="220" alt="Card" [src]="repoImage + '.png'" (error)="repoImageNotFound()"/>
+        <img height="220" alt="Card" [src]="repoImage + '.png'"/>
     </ng-template>
     <ng-template pTemplate="subtitle">
         @if (pinned) {

@@ -12,14 +12,23 @@ import { StyleModule } from '../../shared/style/style.module';
 export class RepoComponent {
   @Input() repo?: GithubRepo;
   @Input() pinned?: boolean;
-  repoImage: string = '';
+  repoImage: string = 'repo_default';
+
+  private static readonly REPOS_WITH_IMAGES = new Set([
+    'add-game-to-grouvee',
+    'dardos',
+    'Handy_Utils_Assaultcube',
+    'overcooked-level-randomizer',
+    'primeng-vs-angular_material',
+    'regalo-misterioso-Angular17',
+    'regalos-misteriosos',
+    'song-redirect',
+    'valentines-day'
+  ]);
 
   ngOnInit() {
-    this.repoImage = this.repo?.name ?? '';
-  }
-
-  repoImageNotFound() {
-    this.repoImage = 'repo_default';
+    const repoName = this.repo?.name ?? '';
+    this.repoImage = RepoComponent.REPOS_WITH_IMAGES.has(repoName) ? repoName : 'repo_default';
   }
 
   transformToReadableDate(date: string | undefined) {
