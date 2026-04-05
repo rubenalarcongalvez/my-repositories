@@ -23,6 +23,8 @@ export class RepoComponent {
     'regalo-misterioso-Angular17',
     'regalos-misteriosos',
     'song-redirect',
+    'svelte-sveltekit-learn',
+    'react-learn',
     'valentines-day'
   ]);
 
